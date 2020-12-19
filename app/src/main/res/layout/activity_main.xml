@@ -18,7 +18,8 @@
         app:centre_button_color="@color/greeen"
         app:centre_button_icon="@drawable/ic_baseline_call_24"
         app:inactive_item_color="@android:color/darker_gray"
-        app:space_background_color="@color/white"
+        app:space_background_color="@color/spacegreen"
+
         app:space_item_icon_only_size="@dimen/space_item_icon_only_size"
         app:space_item_icon_size="@dimen/space_item_icon_default_size"
         app:space_item_text_size="@dimen/space_item_text_default_size" />
@@ -41,74 +42,74 @@
                 android:layout_height="200dp"
                 app:sliderIndicatorSelectedColor="@color/greeen" />
         </androidx.cardview.widget.CardView>
-    </LinearLayout>
 
-                <ScrollView
+        <ScrollView
+            android:layout_width="392dp"
+            android:layout_height="120dp">
+
+            <HorizontalScrollView
+
+                android:layout_width="392dp"
+                android:layout_height="144dp"
+
+                android:scrollbars="none">
+
+                <LinearLayout
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <HorizontalScrollView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="310dp"
-                        android:scrollbars="none">
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-
-                            android:orientation="horizontal">
-
-                            <ImageButton
-                                android:id="@+id/homebt"
-                                android:layout_width="120dp"
-                                android:layout_height="120dp"
-                                android:background="@color/white"
-                                android:src="@drawable/home_loan" />
+                    android:layout_height="wrap_content"
 
 
-                            <ImageButton
-
-                                android:id="@+id/eduic"
-                                android:layout_width="120dp"
-                                android:layout_height="120dp"
-                                android:background="@color/white"
-                                android:src="@drawable/edu_loan" />
-
-                            <ImageButton
-                                android:id="@+id/goldic"
-                                android:layout_width="137dp"
-                                android:layout_height="120dp"
-                                android:background="@color/white"
-                                android:src="@drawable/goldloan" />
-
-                            <ImageButton
-                                android:id="@+id/caric"
-                                android:layout_width="120dp"
-                                android:layout_height="120dp"
-                                android:background="@color/white"
-                                android:src="@drawable/vehicloan" />
-
-                            <ImageButton
-                                android:id="@+id/buildic"
-                                android:layout_width="120dp"
-                                android:layout_height="120dp"
-                                android:background="@color/white"
-                                android:src="@drawable/buissiness" />
-
-                            <ImageButton
-                                android:id="@+id/womenic"
-                                android:layout_width="120dp"
-                                android:layout_height="120dp"
-                                android:background="@color/white"
-                                android:src="@drawable/womenloan" />
-
-                        </LinearLayout>
-
-                    </HorizontalScrollView>
-                </ScrollView>
+                    android:orientation="horizontal">
 
 
+                    <ImageButton
+                        android:id="@+id/homebt"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/round"
+                        android:src="@drawable/home_loan" />
+
+                    <ImageButton
+
+                        android:id="@+id/eduic"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/round"
+                        android:src="@drawable/edu_loan" />
+
+                    <ImageButton
+                        android:id="@+id/goldic"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/round"
+                        android:src="@drawable/goldloan" />
+
+                    <ImageButton
+                        android:id="@+id/caric"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/round"
+                        android:src="@drawable/vehicloan" />
+
+                    <ImageButton
+                        android:id="@+id/buildic"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/round"
+                        android:src="@drawable/buissiness" />
+
+                    <ImageButton
+                        android:id="@+id/womenic"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:background="@drawable/round"
+                        android:src="@drawable/womenloan" />
+
+                </LinearLayout>
+
+            </HorizontalScrollView>
+        </ScrollView>
+    </LinearLayout>
 
 
 </RelativeLayout>

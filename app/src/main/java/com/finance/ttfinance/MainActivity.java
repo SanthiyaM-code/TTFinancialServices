@@ -45,9 +45,11 @@ public class MainActivity extends AppCompatActivity {
         MyAdapter myAdapter=new MyAdapter(images);
 
         sliderView.setSliderAdapter(myAdapter);
-        sliderView.setIndicatorAnimation(IndicatorAnimationType.THIN_WORM);
-        sliderView.setSliderTransformAnimation(SliderAnimations.VERTICALFLIPTRANSFORMATION);
+        sliderView.startAutoCycle();
         sliderView.setAutoCycle(true);
+        sliderView.setIndicatorAnimation(IndicatorAnimationType.THIN_WORM);
+        sliderView.setSliderTransformAnimation(SliderAnimations.ZOOMOUTTRANSFORMATION);
+
 
 
         SpaceNavigationView spaceNavigationView = (SpaceNavigationView) findViewById(R.id.space);
