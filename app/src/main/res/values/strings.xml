@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">TTFinance</string>
+    <string name="homeloan">HomeLoan</string>
+    <string name="education_loan">Education Loan</string>
+    <string name="gold_loan">Gold Loan</string>
+    <string name="vehicle_loan">Vehicle Loan</string>
+    <string name="buissiness_loan">Buissiness Loan</string>
+    <string name="women_welfare_loan">Women Welfare Loan</string>
+    <string name="tt_finance">TT Finance</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

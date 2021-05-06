@@ -2,7 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
     android:layout_width="match_parent"
+
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -43,73 +45,287 @@
                 app:sliderIndicatorSelectedColor="@color/greeen" />
         </androidx.cardview.widget.CardView>
 
-        <ScrollView
-            android:layout_width="392dp"
-            android:layout_height="120dp">
-
-            <HorizontalScrollView
-
-                android:layout_width="392dp"
-                android:layout_height="144dp"
-
-                android:scrollbars="none">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="Products"
+            android:textColor="@color/greeen"
+            android:textSize="20dp" />
 
 
-                    android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:rowCount="2"
+                android:columnCount="3"
+                android:layout_margin="10dp"
+                android:columnOrderPreserved="false">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="20dp"
+
+                    app:cardElevation="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gridbg"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+
+                            android:src="@drawable/home_loan"
+                            android:layout_marginTop="15dp"/>
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Home Loan"
+                            android:textSize="10dp"
+                            android:background="@color/space_transparent"
+                            android:textColor="@color/greeen"
+                            android:id="@+id/homeloangridbtn"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gridbg"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/edu_loan"
+                            android:layout_marginTop="15dp"/>
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Education Loan"
+                            android:textSize="10dp"
+
+                            android:textColor="@color/greeen"
+                            android:background="@color/space_transparent"
+                            android:id="@+id/eduloanbtn"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gridbg"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/buissiness"
+                            android:layout_marginTop="15dp"/>
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Business Loan"
+                            android:background="@color/space_transparent"
+                            android:textSize="10dp"
+                            android:textColor="@color/greeen"
+                            android:id="@+id/businessloanbtn"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gridbg"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/goldloan"
+                            android:layout_marginTop="15dp"/>
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Gold Loan"
+                            android:textSize="10dp"
+
+                            android:textColor="@color/greeen"
+
+                            android:background="@color/space_transparent"                            android:id="@+id/goldloanbtn"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gridbg"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/electronicloan"
+                            android:layout_marginTop="15dp"/>
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Vehicle Loan"
+                            android:textSize="10dp"
+                            android:background="@color/space_transparent"
+                            android:textColor="@color/greeen"
+                            android:id="@+id/vehicleloanbtn"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_margin="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/gridbg"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:src="@drawable/womenloan"
+                            android:layout_marginTop="15dp"/>
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="Women Welfare Loan"
+                            android:textSize="10dp"
+                            android:background="@color/space_transparent"
+                            android:textColor="@color/greeen"
+                            android:id="@+id/womenloanbtn"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
 
-                    <ImageButton
-                        android:id="@+id/homebt"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@drawable/round"
-                        android:src="@drawable/home_loan" />
+            </GridLayout>
 
-                    <ImageButton
 
-                        android:id="@+id/eduic"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@drawable/round"
-                        android:src="@drawable/edu_loan" />
 
-                    <ImageButton
-                        android:id="@+id/goldic"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@drawable/round"
-                        android:src="@drawable/goldloan" />
 
-                    <ImageButton
-                        android:id="@+id/caric"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@drawable/round"
-                        android:src="@drawable/vehicloan" />
+        </LinearLayout>
 
-                    <ImageButton
-                        android:id="@+id/buildic"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@drawable/round"
-                        android:src="@drawable/buissiness" />
 
-                    <ImageButton
-                        android:id="@+id/womenic"
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@drawable/round"
-                        android:src="@drawable/womenloan" />
 
-                </LinearLayout>
 
-            </HorizontalScrollView>
-        </ScrollView>
+
+<!--                    <ImageButton-->
+<!--                        android:id="@+id/homebt"-->
+<!--                        android:layout_width="80dp"-->
+<!--                        android:layout_height="80dp"-->
+<!--                        android:background="@drawable/round"-->
+<!--                        android:contentDescription="@string/homeloan"-->
+<!--                        android:src="@drawable/home_loan" />-->
+
+<!--                    <ImageButton-->
+
+<!--                        android:id="@+id/eduic"-->
+<!--                        android:layout_width="80dp"-->
+<!--                        android:layout_height="80dp"-->
+<!--                        android:background="@drawable/round"-->
+<!--                        android:contentDescription="@string/education_loan"-->
+<!--                        android:src="@drawable/edu_loan" />-->
+
+<!--                    <ImageButton-->
+<!--                        android:id="@+id/goldic"-->
+<!--                        android:layout_width="80dp"-->
+<!--                        android:layout_height="80dp"-->
+<!--                        android:background="@drawable/round"-->
+<!--                        android:contentDescription="@string/gold_loan"-->
+<!--                        android:src="@drawable/goldloan" />-->
+
+<!--                    <ImageButton-->
+<!--                        android:id="@+id/caric"-->
+<!--                        android:layout_width="80dp"-->
+<!--                        android:layout_height="80dp"-->
+<!--                        android:background="@drawable/round"-->
+<!--                        android:contentDescription="@string/vehicle_loan"-->
+<!--                        android:src="@drawable/vehicloan" />-->
+
+<!--                    <ImageButton-->
+<!--                        android:id="@+id/buildic"-->
+<!--                        android:layout_width="80dp"-->
+<!--                        android:layout_height="80dp"-->
+<!--                        android:background="@drawable/round"-->
+<!--                        android:contentDescription="@string/buissiness_loan"-->
+<!--                        android:src="@drawable/buissiness" />-->
+
+<!--                    <ImageButton-->
+<!--                        android:id="@+id/womenic"-->
+<!--                        android:layout_width="80dp"-->
+<!--                        android:layout_height="80dp"-->
+<!--                        android:background="@drawable/round"-->
+<!--                        android:contentDescription="@string/women_welfare_loan"-->
+<!--                        android:src="@drawable/womenloan" />-->
+
+
     </LinearLayout>
-
 
 </RelativeLayout>

@@ -61,4 +61,5 @@ public class MyAdapter extends SliderViewAdapter<MyAdapter.MyViewHolder> {
     }
 
 
+
 }

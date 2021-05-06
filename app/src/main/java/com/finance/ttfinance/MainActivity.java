@@ -4,15 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.luseen.spacenavigation.SpaceItem;
 import com.luseen.spacenavigation.SpaceNavigationView;
+import com.luseen.spacenavigation.SpaceOnClickListener;
 import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
@@ -23,13 +27,15 @@ import java.util.List;
 public class MainActivity extends AppCompatActivity {
     ImageButton login;
     SliderView sliderView;
-    ImageButton home,book,dollar,car,build,women;
+    Button home,book,dollar,car,build,women;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
 
 
         sliderView=findViewById(R.id.imageSlider);
@@ -50,8 +56,6 @@ public class MainActivity extends AppCompatActivity {
         sliderView.setIndicatorAnimation(IndicatorAnimationType.THIN_WORM);
         sliderView.setSliderTransformAnimation(SliderAnimations.ZOOMOUTTRANSFORMATION);
 
-
-
         SpaceNavigationView spaceNavigationView = (SpaceNavigationView) findViewById(R.id.space);
         spaceNavigationView.initWithSaveInstanceState(savedInstanceState);
         spaceNavigationView.addSpaceItem(new SpaceItem("HOME", R.drawable.ic_baseline_home_24));
@@ -59,47 +63,82 @@ public class MainActivity extends AppCompatActivity {
 
         spaceNavigationView.setCentreButtonIconColorFilterEnabled(false);
 
-        home=findViewById(R.id.homebt);
-        book=findViewById(R.id.eduic);
-        car=findViewById(R.id.caric);
-        build=findViewById(R.id.buildic);
-        women=findViewById(R.id.womenic);
-        dollar=findViewById(R.id.goldic);
+        spaceNavigationView.setSpaceOnClickListener(new SpaceOnClickListener() {
+            @Override
+            public void onCentreButtonClick() {
+                Intent intent=new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:07449111411"));
+                startActivity(intent);
+            }
+            @Override
+            public void onItemClick(int itemIndex, String itemName) {
+
+               if(itemName == "CONTACT")
+               {
+                   Intent intent=new Intent(MainActivity.this,ContactActivity.class);
+                   startActivity(intent);
+                   finish();
+               }
+            }
+            @Override
+            public void onItemReselected(int itemIndex,String item) {
+            }
+
+        });
+
+        home=findViewById(R.id.homeloangridbtn);
+        book=findViewById(R.id.eduloanbtn);
+        car=findViewById(R.id.vehicleloanbtn);
+        build=findViewById(R.id.businessloanbtn);
+        women=findViewById(R.id.womenloanbtn);
+        dollar=findViewById(R.id.goldloanbtn);
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"Haii",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(MainActivity.this,HomeLoanActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
         book.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"Haii",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(MainActivity.this,EducationLoanActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
         car.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"Haii",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(MainActivity.this,VehicleLoanActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
         build.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"Haii",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(MainActivity.this,BusinessLoanActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
         dollar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"Haii",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(MainActivity.this,GoldLoanActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
         women.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"Haii",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(MainActivity.this,WomenLoanActivity.class);
+                startActivity(intent);
+                finish();
             }
         });
         login=findViewById(R.id.login_bt);
@@ -114,6 +153,10 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+
+
+
 
 
 
